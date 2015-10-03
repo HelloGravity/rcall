@@ -1,0 +1,17 @@
+{
+    "name": "rcall",
+    "description": "calling AJAX RPCs easily",
+    "version": "0.0.1",
+    "keywords": [],
+    "main": "./rcall.js",
+    "dependencies": {
+    },
+    "devDependencies": {
+        
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/HellGravity/rcall.git"
+    },
+    "license": "MIT"
+}
