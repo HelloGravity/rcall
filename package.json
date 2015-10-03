@@ -1,7 +1,7 @@
 {
     "name": "rcall",
     "description": "calling AJAX RPCs easily",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "keywords": [],
     "main": "rcall.js",
     "dependencies": {
