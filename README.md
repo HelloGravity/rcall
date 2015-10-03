@@ -25,9 +25,7 @@ var rcall = require('rcall');
 
 /* Call RPC method */
 rcall('some_function', ['a', 'b'], function (arg1, arg2) {
-    if (!err) {
-        console.log(arg1, arg2);
-    }
+    console.log(arg1, arg2);
 }, this) /* rcall supports optional binding to a different context */
 ```
 
