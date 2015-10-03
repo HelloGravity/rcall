@@ -4,7 +4,6 @@ module.exports = function (method_name, args, response_callback, context) {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
            if(xmlhttp.status == 200) {
-                console.log(xmlhttp.responseText)
                 var response = JSON.parse(xmlhttp.responseText);
                 if (!(response && response.constructor === Array)) {
                     console.error("server response wasn't in the expected format")      
