@@ -2,6 +2,7 @@ calling AJAX RPCs easily.
 rdeclare binds itself to '/rpc-api' 
 
 Example Usage:
+
 **Server**
 ```js
 var app = require('express')();
