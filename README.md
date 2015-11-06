@@ -1,31 +1,22 @@
-calling AJAX RPCs easily.  
-rdeclare binds itself to '/rpc-api' 
+Calling AJAX RPCs easily.  
+rcall should be used in the client side along with rdeclare in the server side.
 
-Example Usage:
+API:
+```
+rcall(name, args, context)
 
-**Server**
-```js
-var express = require('express');
-var app = express();
-var rdeclare = require('rdclare')(app);
-
-/* Declare RPC method */
-rdeclare('some_function', function(arg1, arg2, cb) {
-    /* do something with the args*/
-    long_async_operation(arg1 + arg2, function() {
-        cb(arg2, arg1);
-    });
-});    
-
+name - the name of the RPC method.
+args - an array of args to send to the RPC method.
+context - an optional 'this' context that will be used.
 ```
 
-**Client**
+Example Usage (matching server example exist in rdeclare's readme):
 ```js
 var rcall = require('rcall'); 
 
 /* Call RPC method */
 rcall('some_function', ['a', 'b'], function (arg1, arg2) {
     console.log(arg1, arg2);
-}, this) /* rcall supports optional binding to a different context */
+}, this);
 ```
 
