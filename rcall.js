@@ -8,7 +8,9 @@ module.exports = function (method_name, args, response_callback, context) {
                 if (!(response && response.constructor === Array)) {
                     console.error("server response wasn't in the expected format")      
                 }
-                response_callback.apply(context, response);
+                if (response_callback) {
+                    response_callback.apply(context, response);
+                }
            } else {
               console.error('error response from RPC request, status is', xmlhttp.status, '(', xmlhttp.responseText,')')
            }
