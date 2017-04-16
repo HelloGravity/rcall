@@ -17,7 +17,7 @@ module.exports = function (method_name, args, response_callback, context) {
         }
     }
 
-    xmlhttp.open("POST", "/rpc-api", true);
+    xmlhttp.open("POST", "rpc-api", true);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send(JSON.stringify({
         'method_name': method_name,
